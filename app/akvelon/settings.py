@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-s^0=cg+oimzs!@7!_sgu)6h_(85a$#gmgjuz=t#lw-h1)^37!_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'akvelon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pgdb',
+        'USER': 'pguser',
+        'PASSWORD': 'pgpass',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 
