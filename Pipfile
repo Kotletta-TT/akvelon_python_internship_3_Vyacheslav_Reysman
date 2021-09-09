@@ -8,6 +8,7 @@ psycopg2-binary = "*"
 django = "*"
 djangorestframework = "*"
 drf-yasg = "*"
+djoser = "*"
 
 [dev-packages]
 

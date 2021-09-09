@@ -7,10 +7,10 @@ from transactions_api.models import Transact
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ['username', 'email', 'first_name', 'last_name']
 
 
 class TransactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Transact
-        fields = '__all__'
+        fields = ['date', 'amount']
