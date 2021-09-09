@@ -2,12 +2,17 @@
 
 ## This test task is written for the company Akvelon.
 
-Start this project: `docker-compose up`  
+1. Start this project: `docker-compose up`  
 _This command up 2 containers (web-app, db) and auto-migrate data to db, auto-create superuser, and start app_  
 * _If you want change username/password/email superuser - change docker-compose.yml file_  
 * _If you want autofill database (test users and test payments) use docker-compose.yml TESTDATA=1 flag_
+2. Open browser and go [link](http://localhost:8000/swagger/)_, this API documnetation_
 
+- Release registration/authentication users to api:  
+> [Registration users](http://localhost:8000/auth/users/)   
+> [Get token](http://localhost:8000/auth/token/login/)  
 
+3. For use any request to API, you must be authorized, to do this, you need setup header `Authorization : Token {YOUR TOKEN}`
 
 ### Tasks:  
 #### TASK №1

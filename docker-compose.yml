@@ -18,7 +18,7 @@ services:
     tty: true
     environment:
       DJANGO_SUPERUSER_ADMIN: admin
-      DJANGO_SUPERUSER_EMAIL: admin
+      DJANGO_SUPERUSER_EMAIL: admin@admin.ru
       DJANGO_SUPERUSER_PASSWORD: adminp2ss
       TESTDATA: 0
     command: ./start.sh

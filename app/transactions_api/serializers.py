@@ -1,13 +1,14 @@
 from rest_framework import serializers
-from django.contrib.auth.models import User
 
 from transactions_api.models import Transact
 
 
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ['username', 'email', 'first_name', 'last_name']
+class UserSerializer(serializers.Serializer):
+    username = serializers.CharField(max_length=150)
+    email = serializers.EmailField()
+    first_name = serializers.CharField(max_length=50)
+    last_name = serializers.CharField(max_length=50)
+    finance_now = serializers.DecimalField(max_digits=8, decimal_places=2, default=0.00)
 
 
 class TransactionSerializer(serializers.ModelSerializer):
